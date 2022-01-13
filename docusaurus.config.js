@@ -6,8 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "lucaschang95",
+  tagline: "storm!",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -23,13 +23,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
@@ -44,17 +42,17 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "My Site",
+        title: "Lucaschang's Site",
         logo: {
-          alt: "My Site Logo",
+          alt: "Logo",
           src: "img/logo.svg",
         },
         items: [
           {
             type: "doc",
             docId: "intro",
-            position: "left",
             label: "Tutorial",
+            position: "left",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
