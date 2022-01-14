@@ -1,0 +1,14 @@
+# source map
+
+## 格式
+
+```
+{
+　　version : 3,
+   file: "out.js",
+   sourceRoot : "",
+   sources: ["foo.js", "bar.js"],
+   names: ["src", "maps", "are", "fun"],
+   mappings: "AAgBC,SAAQ,CAAEA"
+}
+```

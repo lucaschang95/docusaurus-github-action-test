@@ -1,0 +1,4 @@
+# Array
+
+- number[]
+- Array<number>

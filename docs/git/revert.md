@@ -1,0 +1,3 @@
+# revert
+
+git revert <commit>
