@@ -13,8 +13,8 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "lucaschang95",
+  projectName: "fe-notes-docusaurus",
 
   presets: [
     [
@@ -42,7 +42,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Lucaschang's Site",
+        title: "lucaschang95",
         logo: {
           alt: "Logo",
           src: "img/logo.svg",
@@ -51,12 +51,12 @@ const config = {
           {
             type: "doc",
             docId: "intro",
-            label: "Tutorial",
+            label: "文档",
             position: "left",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          { to: "/blog", label: "博客", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/lucaschang95/fe-notes-docusaurus",
             label: "GitHub",
             position: "right",
           },
@@ -69,28 +69,28 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
+                label: "Notes",
                 to: "/docs/intro",
               },
             ],
           },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
-          },
+          // {
+          //   title: "Community",
+          //   items: [
+          //     {
+          //       label: "Stack Overflow",
+          //       href: "https://stackoverflow.com/questions/tagged/docusaurus",
+          //     },
+          //     {
+          //       label: "Discord",
+          //       href: "https://discordapp.com/invite/docusaurus",
+          //     },
+          //     {
+          //       label: "Twitter",
+          //       href: "https://twitter.com/docusaurus",
+          //     },
+          //   ],
+          // },
           {
             title: "More",
             items: [
@@ -100,12 +100,12 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/lucaschang95/fe-notes-docusaurus",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} lucaschang95' Project, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
