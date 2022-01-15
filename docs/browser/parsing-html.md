@@ -23,8 +23,6 @@ dynamic脚本
 
 - js中引入其他`<script>`, 行为和async一样
 
-
-
 ## DOMContentLoaded
 
 - 当 HTML 文档解析完成就会触发

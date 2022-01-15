@@ -22,7 +22,6 @@ title: text when mouse hover
     <figcaption>your figcaption here</figcaption>
 </figure>
 ```
-
 同时, 第一个元素不一定需要是img
 
 Summing up: if an image has meaning, in terms of your content, you should use an HTML image. If an image is purely decoration, you should use CSS background images.
