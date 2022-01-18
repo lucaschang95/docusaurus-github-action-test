@@ -21,7 +21,6 @@ title: text when mouse hover
     <img>
     <figcaption>your figcaption here</figcaption>
 </figure>
-```
 同时, 第一个元素不一定需要是img
 
 Summing up: if an image has meaning, in terms of your content, you should use an HTML image. If an image is purely decoration, you should use CSS background images.
@@ -37,8 +36,6 @@ Summing up: if an image has meaning, in terms of your content, you should use an
 controls告诉浏览器我们要使用你的video控制界面
 
 audio只需要把图中的video tag换成audio tag.
-
-
 
 
 ### SVG
