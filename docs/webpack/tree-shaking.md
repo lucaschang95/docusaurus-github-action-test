@@ -1,6 +1,6 @@
 # Tree shaking
 
-
+> _Tree shaking_ is a term commonly used in JavaScript context for dead-code elimination
 
 ## 前提
 

@@ -7,17 +7,9 @@
 1. 会污染全局变量
 2. 模块之间的依赖关系不明显
 
-
-
 ## 规范
 
 CommonJS，AMD，CMD，ES6 Module这4种规范
-
-
-
-
-
-
 
 ## CommonJS
 

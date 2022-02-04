@@ -1,0 +1,4 @@
+# TypeScript
+
+- target
+- noEmitOnError

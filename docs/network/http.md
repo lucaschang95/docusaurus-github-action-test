@@ -5,26 +5,44 @@
 1. **无连接**: 请求时建立连接, 请求完释放连接. 每个连接只处理一个请求
 2. **无状态**: 当前请求不依赖一之前的请求
 
+## http message
 
+Web developers, or webmasters, rarely craft these textual HTTP messages themselves: software, a Web browser, proxy, or Web server, perform this action
 
-## 协议格式
+### 格式
 
+- start line
+- http headers
+- blank line
+- body (optional)
 
+### http request
 
-#### 请求报文
+#### start line
 
-- 请求行 `GET / HTTP/1.1`  
-- 请求头部
-- 空行
-- 包体
+- http method
+- request url
+  - absolute or relative
+- http version
 
-#### 响应报文
-- 响应行 `HTTP/1.1 200 OK`
-- 请求头部
-- 空行
-- 包体
+#### header
 
+`headerName: headerValue;`
 
+#### body
+
+- single source
+  - `Content-Type, Content-Length`
+- multi part
+  - html form中
+
+### http response
+
+#### status line
+
+- http version
+- status code
+- status version
 
 ## HTTP方法
 
@@ -41,17 +59,15 @@
 
 **幂等**方法: 一次和多次的结果是一样的
 
+GET和POST区别
 
+> - `GET`幂等, `POST`不是幂等
+> - `GET`请求内容放到url中, `POST`的请求参数放到包体中
+> - `GET`长度受限, `POST`长度不受限制
 
-#### GET和POST区别
+## header
 
-- `GET`幂等, `POST`不是幂等
-- `GET`请求内容放到url中, `POST`的请求参数放到包体中
-- `GET`长度受限, `POST`长度不受限制
-
-
-
-
+### 分类
 
 ## 响应码
 

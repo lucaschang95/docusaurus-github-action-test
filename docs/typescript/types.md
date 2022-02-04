@@ -1,14 +1,42 @@
 # Type 类型
 
-let num: number;
+## 常见type类型
 
-let str: string;
+### primitives
 
-let bool: boolean;
+- `string`, `number`, `boolean`
 
-#### 数组
+### Arrays
 
-let boolArray: boolean[];
+- `number[]`, `Array<number>`
+
+### any
+
+- use whenever you don’t want a particular value to cause typechecking errors.
+- `noImplicitAny`
+
+### union
+
+`string | number`
+
+### Literal Types
+
+## Type Aliases
+
+```typescript
+type Point = {
+  x: number;
+  y: number;
+};
+```
+
+## Type Assertions
+
+`as`
+
+specify a more specific type
+
+- 只能是more specific和less specific
 
 
 
