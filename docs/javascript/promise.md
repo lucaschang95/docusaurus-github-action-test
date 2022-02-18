@@ -1,28 +1,25 @@
 # Promise
 
-**Promise对象表示异步操作的完成(或失败)以及结果值**
-
-- promise的使用分为两部分: 
-  - 创建: 一般由third-party API来提供
-  - 使用: 我们一般是在使用promise
-
-
-
-## promise状态转换
+## state
 
 - 创建后: `pending`
 - 任务完成: 转换为 `resolved`
 - 任务失败: 转换为`reject`
 
+## Instance methods
 
+### `Promise.prototype.then()`
 
-## 原型方法
+- then方法必须返回一个promise对象
+- 如果返回普通值，则会用promise进行包装
+- 如果then里没有return，则会返回undefined包装的promise对象
+- then值穿透
 
-- `Promise.prototype.catch(onRejected)`
-- `Promise.prototype.then(onFulfilled, onRejected)`
-- `Promise.prototype.finally(onFinally)`
+### `Promise.prototype.catch()`
 
+- catch方法也会返回一个promise(either resolved or rejected)
 
+### `Promise.prototype.finally()`
 
 ## 静态方法
 
@@ -30,13 +27,9 @@
 
 - 直接创建`resolve`状态的promise
 
-
-
 #### `Promise.reject(reason)`
 
 - 直接创建`reject`状态的promise
-
-
 
 #### `Promise.all(iterable)`
 
@@ -50,20 +43,12 @@
 
 - 一旦迭代器中某个promise状态变为`resolve`或`reject`, `race`的结果也随之改变
 
-
-
 ## 创建promise
 
 - `new Promise(function(resolve, reject) { ... })` 这个参数又称为**executor**
 - executor通过此种方法传入promise中, promise负责调用该executor
 - executor中的resolve和reject函数通过`then()`等方法添加
 - 创建promise后, 便会直接开始运行executor函数
-
-
-
-- 
-
-
 
 ## 手写promise
 
@@ -76,10 +61,6 @@ new myPromise((resolve, reject) => {
     console.log(value);
 })
 ```
-
-
-
-
 
 #### 简易版promise
 
@@ -102,4 +83,3 @@ function MyPromise(fn) {
     }
 }
 ```
-
