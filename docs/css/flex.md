@@ -1,13 +1,9 @@
 # Flexbox （避免与flex混淆）
 
-
-
 flex影响
 
 - items的排列
 - items在主轴和交叉轴上的大小（flex属性，align-items属性）
-
-
 
 **开启: `display: flex`** 或者 **`inline-flex`**
 
@@ -16,8 +12,6 @@ flex影响
 ## 默认属性
 
 - 按行排列, 不会伸长, 但会缩短, 纵向会伸长
-
-
 
 ## flex-direction
 
@@ -31,13 +25,9 @@ flex影响
 
 `nowrap`, `wrap`, `wrap-reverse`
 
-
-
 #### `flex-flow`
 
 **他是`flex-direction`和`flex-wrap`的简写方式**
-
-
 
 ## justify-content (控制主轴上的行为)
 
@@ -49,17 +39,11 @@ flex影响
 
 stretch, center, start, end
 
-**可以被align-self改写**
-
-
+可以被align-self改写
 
 ## order
 
 缺省值为0，修改其大小可以改变出现顺序
-
-
-
-
 
 ## flex属性
 
@@ -70,25 +54,19 @@ stretch, center, start, end
 
 **flex-grow**：缩小时，它缩小的比例
 
-**flex-shrink**：在扩大缩小之前，这个flex对象应该是多大
+**flex-basis**：在扩大缩小之前，这个flex对象应该是多大
 
-**flex-basis**：扩大时，它扩大的比例
+**flex-grow**：扩大时，它扩大的比例
 
 - auto：找到每个flex item的max-content作为flex-basis，然后剩余空间平均分配
 - 0：设置为0的时候，代表完全忽略每个对象的flex-basis，直接进行分配
 - 否则将content大小设置为flex-basis
 
-
-
-
-
 **flex增长收缩行为受到对象min-content影响**
-
-
 
 ## flex-basis
 
-- 确定每个items的initial size 
+- 确定每个items的initial size
 - 覆盖item本身的size (width和height)
 
 auto的时候
@@ -100,8 +78,6 @@ auto的时候
 
 - 完全忽视item的大小，根据flex-grow进行分配
 
-
-
 ## flex-shrink
 
 - 在container长度不够的时候，拿掉空间，使得overflow不会出现（aking away space to make boxes fit into their container without overflowing.）
@@ -111,8 +87,6 @@ auto的时候
 0的时候
 
 - 不会缩小，因此会出现overflow
-
-
 
 ## 如何确定item的size
 
@@ -127,8 +101,6 @@ auto的时候
 
 - item的flex-basis值相加，如果小于container的长度，则考虑flex-grow
 - 如果大于container的长度，则考虑flex-shrink
-
-
 
 ## ref
 

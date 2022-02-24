@@ -1,46 +1,32 @@
 # 格式化上下文 (BFC，IFC)
 
-**会形成个完全独立的渲染区域**
+> 会形成个完全独立的渲染区域
 
+## 如何生成BFC?
 
-
-## 形成BFC
-
-- 根元素（html）
+- 根元素`<html>`
 - 浮动元素 (float)
-- overflow的值不为visible（hidden，scroll，auto，inherit）
-- position的值不为static（absolute或fixed）
-- display的值为inline-block, table-cell, table-caption
-
-**注意**: 通常使用`overflow`来形成一个bfc
-
-
-
-
+- `overflow`的值不为`visible`(`hidden`，`scroll`，`auto`，`inherit`)
+- `position`的值不为`static`（`absolute`或`fixed`）
+- `display`的值为`inline-block`, `table-cell`, `table-caption`
 
 ## BFC的特性
 
-- 内部的Box会在**垂直方向放置**
-- 内部box**靠左**, margin外侧与容器的content重合
-- 垂直方向上的距离由margin决定, 容器内的box之间会发生**margin的重叠**
+- 内部的Box会在垂直方向放置
+- 内部Box靠左, margin外侧与容器的content重合
+- 垂直方向上的距离由margin决定, 容器内的box之间会发生margin的重叠
 - bfc的区域不会与float的元素区域重叠.
 - 计算bfc的高度时，浮动元素也参与计算
 - bfc就是页面上的一个独立容器，容器里面的子元素不会影响外面元素。
 
-
-
 ## 作用
 
-1. 避免float造成的高度塌陷
-4. 制作两栏布局（防止文字环绕）
-
-
+- 避免margin collapse
+- 避免float造成的高度塌陷
 
 ## 行级排版上下文
 
 **inline formatting context**
-
-
 
 #### ifc内排版规则
 

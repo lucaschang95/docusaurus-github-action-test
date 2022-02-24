@@ -10,19 +10,14 @@ sets how white space inside an element is handled
 - 回车是否保留
 - 超过div空间，要不要自动换行（将空格转为换行）
 
-
-
 normal
 
 合并空格，按需broken line（变为换行）
 
 
-
 nowrap
 
 永不换行，不要按需broken line（变为换行）
-
-
 
 pre
 
