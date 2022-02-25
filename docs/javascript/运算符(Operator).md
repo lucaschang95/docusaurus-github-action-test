@@ -1,4 +1,28 @@
-# 运算符 （operator）
+# 运算符(operator)
+
+## 逻辑运算符(logic operator)
+
+### 逻辑与(&&)
+
+1. 操作值均为boolean
+
+正常计算
+
+2. 一个操作值不是boolean
+
+- 第一个操作数转换后是true，返回第二个值
+- 第一个操作数转换后是false，返回第一个值
+
+### 逻辑或(||)
+
+#### 操作值均为boolean
+
+  正常计算
+
+#### 一个操作值不是boolean
+
+- 第一个操作数转换后是false，返回第二个值
+- 第一个操作数转换后是true，返回第一个值
 
 Comparison operators
 `==` `!=` `===` `!==` `>` `<` `>=` `<=`
@@ -11,10 +35,6 @@ Comparison operators
 - 逻辑运算符
 
 #### 位运算符 （bitwise）
-
-
-
-
 
 Logical operators `&&` `||` `!`
 
@@ -114,8 +134,6 @@ const mergedObj = { ...obj1, ...obj2 };
 
 - 不是相同类型时，首先进行类型转换
 - 之后进行类型比较
-
-
 
 ### 类型转换
 

@@ -11,10 +11,7 @@ Date对象单独拉出去说
 2. instanceof
 
 3. Object.prototype.toString.call(obj)
-   
    1. [object String]，[object ]
-
-
 
 ## 弱相等 (`==`)
 
@@ -23,14 +20,10 @@ Date对象单独拉出去说
 - 两个类型相同, 直接比较 (===)
 - 类型不同, 转换为number比较
 
-
-
 #### 基本类型与引用类型
 
 - 引用类型降为基本类型 (`ToPrimitive()`)
 - string不需要变为number, 但是boolean需要
-
-
 
 #### 引用类型
 
