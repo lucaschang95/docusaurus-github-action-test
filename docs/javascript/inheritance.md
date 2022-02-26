@@ -15,8 +15,6 @@
   - 其实是一个getter和setter, 
 - `Object.getPrototypeOf()]]`
 
-
-
 ## API
 
 - Object.getPrototypeOf( )
@@ -25,21 +23,13 @@
 - Object.create( )
   - newObj = Object.create(protoObj, propDescriptor)
 
-
-
 #### 调用Object.create()发生了什么
 
 1. 创建一个空对象, 并赋值给相应变量(newObj)
 2. 设置该obj的隐式属性`[[proto]]`为`Object.create()`的第一个参数
 3. 在该对象上调用`Object.defineProperties(obj, propDescriptor)`, 并将第二个参数传入
 
-
-
-
-
 ## 各个继承方式
-
-
 
 #### 原型链继承
 
@@ -51,8 +41,6 @@
 
 - 缺点：同时继承了父类实例的实例属性和原型属性（一般来说实例属性是不需要被继承的）
 - 无法向父类构造函数传递参数
-
-
 
 #### 构造函数继承
 

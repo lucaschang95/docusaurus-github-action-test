@@ -151,12 +151,19 @@ const mergedObj = { ...obj1, ...obj2 };
   - +0和-0相等
   - NaN和NaN相等
 
+## 运算符优先级
 
-
-
+- grouping
+- member access, new, function call
+- postfix increment/decrement
+- 逻辑操作符
+- 算数操作符
+- 比较操作符
+- 相等操作符
+- 位操作符
+- 赋值操作符
 
 ## 参考文献
 
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
-

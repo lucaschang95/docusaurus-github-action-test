@@ -1,8 +1,22 @@
 # JavaScript对象
 
-**对象有内部方法和隐式特征属性**
+## 静态方法
 
+### `Object.create()`
 
+`Object.create(proto, propertiesObject)`
+
+### `Object.defineProperties`
+
+```javascript
+Object.defineProperties(object1, {
+  property1: {
+    value: 42,
+    writable: true
+  },
+  property2: {}
+});
+```
 
 ## 对象的内部方法
 
@@ -10,21 +24,15 @@
 - `[[Set]]`
 - `[[Delete]]`
 
-
-
 ## 对象的隐式特征属性
 
 - `[[Extensible]]` 布尔值, 用来表示对象是否可以被修改
   - 与可扩展性对应的两个函数`Object.preventExtensions(obj)`和`Object.isExtensible(obj)`
 - `[[proto]]` 
 
-
-
 ## 对象的属性
 
 **属性有两种类别: 数据属性和访问器属性**
-
-
 
 ### 对象属性的6个特征属性
 
@@ -45,23 +53,15 @@
 - `[[Get]]`: getter函数内容
 - `[[Set]]`: setter函数内容
 
-
-
 #### 修改属性的特征属性
 
 - `Object.defineProperty(obj, 'prop', descriptor)`
 - `Object.defineProperties(obj, { propA: descripor, propB: descripor})`
 - descriptor就是一个object, 描述enumerable等的值
 
-
-
 #### 查看属性的特征属性
 
 - `Object.getOwnPropertyDescriptor(obj, 'prop')`
-
-
-
-
 
 #### 属性查找
 
@@ -69,8 +69,6 @@
   - `'x' in obj`
 - 查找私有属性:
   - `obj.hasOwnProperty('x')`
-
-
 
 #### 属性的遍历
 
@@ -82,18 +80,10 @@
 - `Object.getOwnPropertyNames()`
   - 自身所有属性名字的数组
 
-
-
 ## 属性分类: 按作用
 
 - 数据属性
 - 访问器属性
-
-
-
-
-
-
 
 ## 对象封印
 
@@ -108,8 +98,6 @@
 - Object.seal()`
 - `Object.isSealed()`
 
-
-
 ## 对象冻结
 
 #### 冻结对象:
@@ -120,8 +108,6 @@
 
 - `Object.freeze(obj)`
 - `Objext.isFrozen(obj)`
-
-
 
 ## new一个对象的过程
 
@@ -150,15 +136,7 @@ function _new(constructor, param, ...) {
   - 先创建一个空对象`new Object()`, `{}`
   - 直接定义`__proto__`属性, 完成原型对象的设置
 
-
-
-
-
-
-
 ## 原型方法
-
-
 
 #### Object.assign
 
@@ -175,17 +153,8 @@ function _new(constructor, param, ...) {
 - 合并多个对象
 - 为属性添加默认值
 
-
-
 #### Object.create
 
 `Object.create()`方法创建一个新对象，使用现有的对象来提供新创建的对象的原型
 
-
-
-
-
 ## 遍历对象属性
-
-
-
