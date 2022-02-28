@@ -6,10 +6,11 @@ step:
 4. 检测是否返回了一个对象, 并返回 return new obj
 */
 
-function myNew() {
-  let obj = new Object();
-  let constructor = Array.prototype.shift.call(arguments);
-  obj.__proto__ = constructor.prototype;
-  let ans = constructor.apply(obj, arguments);
-  return (typeof ans === 'object') ? ans : obj;
-};
+
+function newImpl(F) {
+  const obj = {};
+  obj.__proto__ = F.prototype;
+  const args = Array.prototype.slice.call(arguments, 1);
+  const result = F.apply(obj, args);
+  return typeof result === 'object' ? result : obj;
+}

@@ -1,14 +1,5 @@
 # JavaScript继承
 
-- 对象访问一个属性时
-  - 首先查找自有属性
-  - 如果没有，在`[[proto]]`指向的原型对象中继续查找。
-
-## 好处
-
-- 代码复用
-- 逻辑清晰
-
 ## 获得原型对象的方法
 
 - 可以使用浏览器提供的`__proto__`属性
@@ -23,15 +14,9 @@
 - Object.create( )
   - newObj = Object.create(protoObj, propDescriptor)
 
-#### 调用Object.create()发生了什么
-
-1. 创建一个空对象, 并赋值给相应变量(newObj)
-2. 设置该obj的隐式属性`[[proto]]`为`Object.create()`的第一个参数
-3. 在该对象上调用`Object.defineProperties(obj, propDescriptor)`, 并将第二个参数传入
-
 ## 各个继承方式
 
-#### 原型链继承
+### 原型链继承
 
 子类型实例的__proto__指向父类一个实例
 
