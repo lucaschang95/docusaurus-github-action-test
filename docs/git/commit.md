@@ -1,20 +1,25 @@
 # commit
 
-## guideline
-```
-<type>(<scope>): <subject>
+> Record changes to the repository
 
-<blank line>
+## syntax
 
-<body>
+### message
 
-<blank line>
+- `-m <msg>`
+- `--message=<msg>`
 
-<footer>
-```
+### 覆盖author
+
+- `--author=<author>`
+
+### 跳过pre-commit hook
+
+- `--no-verify` or `-n`
 
 
-## ref
+
+## 参考
 
 - commit message: 
   - https://gist.github.com/brianclements/841ea7bffdb01346392c

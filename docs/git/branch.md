@@ -1,17 +1,22 @@
 # branch
 
-git branch
+> List, create, or delete branches
 
-- 查看本地分支
+## syntax
 
-git branch -r
+### 查看本地分支
 
-- 查看远程分支
+`git branch` 或者 `git branch --list`
 
-git branch -a
+### 查看远程分支
 
-- 查看本地和远程的所有分支
+`git branch -r`
 
-git branch -d
+### 本地分支 + 远程分支
 
-git branch -D
+`git branch -a`
+
+### 删除分支
+
+- `git branch -d <branch>`
+- `git branch -D <branch>`
