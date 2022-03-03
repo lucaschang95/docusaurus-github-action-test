@@ -1,26 +1,11 @@
-
-
 # reset
 
-git reset --soft
+> set the current branch head (HEAD) to `<commit>`, optionally modifying index and working tree to match
 
-- 仅覆盖本地版本库
+## syntax
 
-git reset --mixed
+`git reset [<mode>] [<commit>]`
 
-- 版本库、暂存区、工作区
-
-git reset --hard
-
-- 版本库、暂存区、工作区全覆盖
-
-
-
-配合reflog, 找回误删的内容
-
-- reglog 找到commit
-- `git reset --hard <commit>`
-
-## ref
-
-- https://blog.csdn.net/qq_32452623/article/details/79521461
+- `--soft`: do not modify index and working tree
+- `--mixed`: modify index but not working tree
+- `--hard`: modify index and working tree

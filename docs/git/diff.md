@@ -4,15 +4,20 @@ show changes between commits, commit and working tree, etc
 
 ## syntax
 
+### 工作区和暂存区之间的差异
+
 `git diff [<options>] [--] [<path>…​]`
 
-工作区/暂存区 the changes you made relative to the index (staging area for the next commit)
+### 暂存区和commit之间的差异
 
 `git diff [<options>] --cached [--merge-base] [<commit>] [--] [<path>…​]`
 
-`git diff [<options>] [<commit>]  [--] [<path>…​]`
+- `--cached`
+- 如果没有指定commit, 则默认是`HEAD`
 
-比较工作区和commit之间的区别
+### 工作区和commit之间的差异
+
+`git diff [<options>] [<commit>]  [--] [<path>…​]`
 
 ### 两个commit之间的差异
 

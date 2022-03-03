@@ -1,10 +1,16 @@
 # restore
 
-放弃工作区中的修改
+恢复指定的
 
+## syntax
 
+### 放弃工作区中的修改
 
---staged
+`git restore`
+
+### 放弃暂存区中的修改，工作区不变
+
+`git restore --staged`
 
 - 放弃暂存区中的修改
 - 工作区不变
