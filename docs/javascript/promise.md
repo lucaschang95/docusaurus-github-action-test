@@ -6,7 +6,7 @@
 - 任务完成: 转换为 `resolved`
 - 任务失败: 转换为`reject`
 
-## Instance methods
+## 原型方法
 
 ### `Promise.prototype.then()`
 

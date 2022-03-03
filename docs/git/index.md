@@ -1,21 +1,11 @@
 # Git
 
-工作区
+## git的几大区域
 
-- working directory
-
-暂存区
-
-- staging area
-
-版本库
-
-- local repository
-
-远程仓库
-
-- remote repository
-
+- 工作区 working directory
+- 暂存区 staging area
+- 版本库 local repository
+- 远程仓库 remote repository
 
 ## 是否被track?
 
@@ -24,6 +14,6 @@
 - tracked file可以是unmodified, modified, statged
 - git add 来 track new files
 
-## ref
+## 参考
 
-- https://git-scm.com/docs
+- [https://git-scm.com/docs](https://git-scm.com/docs)

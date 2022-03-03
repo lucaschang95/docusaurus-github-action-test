@@ -14,6 +14,6 @@ show changes between commits, commit and working tree, etc
 
 比较工作区和commit之间的区别
 
-`git diff [<options>] [<commit>][<commit>][--] [<path>…​]`
+### 两个commit之间的差异
 
-两个commit之前的区别
+`git diff [<options>] [<commit>][<commit>][--] [<path>…​]`
