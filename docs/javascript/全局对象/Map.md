@@ -4,10 +4,10 @@
 
 `Map.prototype.set(key, value)`
 `Map.prototype.get(key)`
+`Map.prototype.delete(key)`
 `Map.prototype.has(key)`
 
 `Map.prototype.clear()`
-`Map.prototype.delete(key)`
 `Map.prototype.entries()`
 `Map.prototype.forEach(callbackFn, thisArg)`
 
