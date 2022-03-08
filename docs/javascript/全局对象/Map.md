@@ -12,5 +12,4 @@
 `Map.prototype.forEach(callbackFn, thisArg)`
 
 `Map.prototype.keys()`
-
 `Map.prototype.values()`

@@ -10,10 +10,10 @@ Set.prototype.size
 
 ## 实例方法
 
-Set.prototype.add()
+`Set.prototype.add()`
 
-Set.prototype.clear()
+`Set.prototype.delete()`
 
-Set.prototype.delete()
+`Set.prototype.clear()`
 
-Set.prototype.has()
+`Set.prototype.has()`
