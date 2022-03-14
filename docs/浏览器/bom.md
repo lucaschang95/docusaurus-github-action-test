@@ -1,86 +1,50 @@
-# 浏览器对象模型(BOM)
+# BOM
 
+> 浏览器对象模型, Browser Object Model 的缩写
 
+## 内容
 
-**通过BOM可以access and manipulation of the browser window**
+- `navigator`: 客户端浏览器的信息。
+- `history`: 历史记录
+- `location`: 当前 URL 的信息。
+- `screen`: 包含客户端显示屏的信息。
 
-- BOM目前还没有统一的标准
-- BOM, DOM其实是两个东西面向javascript语言的接口
+## Location
 
+Location 对象包含有关当前 URL 的信息。
 
+| 属性     | 描述                                         |
+| -------- | -------------------------------------------- |
+| hash     | 设置或返回从井号 (#) 开始的 URL（锚） 。     |
+| host     | 设置或返回主机名和当前 URL 的端口号。        |
+| hostname | 设置或返回当前 URL 的主机名。                |
+| href     | 设置或返回完整的 URL。                       |
+| pathname | 设置或返回当前 URL 的路径部分。              |
+| port     | 设置或返回当前 URL 的端口号。                |
+| protocol | 设置或返回当前 URL 的协议。                  |
+| search   | 置或返回从问号 (?) 开始的 URL（查询部分） 。 |
 
-
-
-## window对象
-
-**代表浏览器的窗口**
-
-
-
-#### 属性
-
-- `window.innerWidth`, `window.innerHeight` 窗口大小
-- `window.screen.width`, `window,screen.height`
-
-
-
-
-
-## location对象
-
-#### 属性
-
-- `location.href`
-- location.hostname`
-
-- location.pathname`
-- location.protocal`
-
-
-
-#### 方法
-
-- `window.location.assign(url)`
-
-
-
-
+| 方法            | 描述                                                            |
+| --------------- | --------------------------------------------------------------- |
+| assign()        | 加载新的文档。                                                  |
+| reload(‘force’) | 重新加载当前文档。参数可选，不填或填 false 则取浏览器缓存的文档 |
+| replace()       | 用新的文档替换当前文档。                                        |
 
 ## history对象
 
-**浏览器历史**
-
-**这个就是react-router利用的**
-
-
-
-- `history.pushState()`
-  - 不会触发页面刷新, 增加历史记录, 地址栏有变化
-- `history.replaceState()`
-  - 跳转到新页面, 不增加历史记录
-- 都会改变地址栏, 但是一个是state数组push, 一个是当前元素replace,
-
-
-
-
-
-#### 方法
-
-- `history.back()`
-- `history.forward()`
-- `history.go()`
-
-
+```javascript
+back()
+forward()
+go()
+pushState()
+replaceState()
+```
 
 ## Navigator
-
-**访问者(浏览器)的信息**
 
 - **userAgent**: 浏览器信息
 - **language**: 用户浏览器所用语言
 - **languages**: 偏爱语言
-
-
 
 ## 弹出框
 
@@ -90,10 +54,6 @@
 - `confirm(text)` 返回boolean
 - `prompt(text)` 可能返回`null`
 
-
-
-
-
 ## 定时事件
 
 - `setTimeout(function, miliseconds)`
@@ -101,16 +61,12 @@
 - `setInterval(function, miliseconds)`
 - `clearInterval(intervalVariable)`
 
-
-
 ## cookie
 
 #### 添加cookie
 
 - document.cookie = 'username=Bill Gates';
 - 可以设置`expires`和`path`
-
-
 
 ## Ref
 
