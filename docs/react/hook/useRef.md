@@ -1,6 +1,7 @@
 # useRef
 
 > `useRef` is like a “box” that can hold a mutable value in its .current property.
+> `useRef`返回一个可变的ref对象，其.current属性可以指向任何对象，可以是任何值，可以是null。
 
 1. Mutating the .current property doesn’t cause a re-render
 
