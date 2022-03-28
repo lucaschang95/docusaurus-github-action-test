@@ -1,29 +1,52 @@
-# HTTP
+# HTTP Hypertext Transfer Protocol
 
-特点:
+> a stateless application-level request/response protocal that uses extensible semantics and self-descriptive message payloads for flexible interaction with network-based hypertext information systems
 
-1. **无连接**: 请求时建立连接, 请求完释放连接. 每个连接只处理一个请求
-2. **无状态**: 当前请求不依赖一之前的请求
+## 特点
 
-## http message
+- 请求时建立连接, 请求完释放连接. 每个连接只处理一个请求
+- 当前请求不依赖一之前的请求
 
-Web developers, or webmasters, rarely craft these textual HTTP messages themselves: software, a Web browser, proxy, or Web server, perform this action
+## 版本
 
-### 格式
+- HTTP/0.9: 只支持GET请求, 没有状态支持
+- HTTP/1.0
+- HTTP/1.1
+- HTTP/2
 
-- start line
-- http headers
-- blank line
-- body (optional)
+## HTTP 协议格式
 
-### http request
+### 请求message
 
-#### start line
+request-line 请求行: `<method> <request-target> <HTTP-version>` -> `GET /index.html HTTP/1.1`
+headers-field: `<header>`
+`<CRLF>` (空行)
+message-body: `<body>`
 
-- http method
-- request url
-  - absolute or relative
-- http version
+### 响应message
+
+request-line 请求行: `<HTTP-version> <status-code> <reason-phrase>` -> `HTTP/1.1 200 OK`
+headers-field: `<header>`
+`<CRLF>` (空行)
+message-body: `<body>`
+
+## 常见方法
+
+- `GET`:主要的获取信息的方法
+- `HEAD`:响应与GET方法相同, 但服务器不发送body
+- `POST`:常用语提交HTML FORM表单, 新增资源等
+- `OPTIONS`: 显示服务器对访问资源支持的方法, 幂等方法
+- `PUT`:
+- `DELETE`:
+- `CONNECT`: 建立tunnel隧道
+- `TRACE`: debugging
+- `PATCH`: 部分修改 partial modification?
+
+GET和POST区别
+
+> - `GET`幂等, `POST`不是幂等
+> - `GET`请求内容放到url中, `POST`的请求参数放到包体中
+> - `GET`长度受限, `POST`长度不受限制
 
 #### header
 
@@ -44,94 +67,6 @@ Web developers, or webmasters, rarely craft these textual HTTP messages themselv
 - status code
 - status version
 
-## HTTP方法
-
-- **GET**：主要的获取信息的方法
-- **HEAD**：响应与GET方法相同, 但服务器不发送body
-- **POST**：常用语提交HTML FORM表单, 新增资源等
-- **OPTIONS**：显示服务器对访问资源支持的方法, 幂等方法
-- **PUT**：
-- **DELETE**：
-- **CONNECT:** 建立tunnel隧道
-- **OPTIONS**:
-- **TRACE**: debugging
-- **PATCH**: 部分修改 partial modification?
-
-**幂等**方法: 一次和多次的结果是一样的
-
-GET和POST区别
-
-> - `GET`幂等, `POST`不是幂等
-> - `GET`请求内容放到url中, `POST`的请求参数放到包体中
-> - `GET`长度受限, `POST`长度不受限制
-
-## header
-
-### 分类
-
-## 响应码
-
-- **通用规则**:
-  - 客户端不理解响应码时候, 将以该系列第一个响应码来处理
-
-#### 1XX
-
-请求已接收到, 需要进一步处理才能完成, HTTP/1.0不支持
-- **100 Continue:** 客户端上传大文件前使用
-  - 由客户端请求中`Expect: 100-continue`触发
-- **101 Switch Protocols:** 协议升级使用 (ws或者http/2.0)
-  - 由客户端发起请求中`Upgrade`头部触发
-- **102 Processing:**  服务器收到, 正在处理. (如WebDAV的文件操作)
-  - 时间太长会被假定为请求丢失
-
-#### 2xx
-
-- **200 OK:** 成功返回响应
-- **201 Created:** 有新资源在服务器端被成功创建
-- **202 Accepted:** 异步, 需要长时间处理的任务
-- **203 Non-Authoritative Information:**
-- **204 No Content:** 成功执行请求, 不携带响应包体, (暗示客户端无需更新视图)
-- **205 Reset Content**:
-- **206 PartialContent**: 使用range协议返回部分响应内容时的响应码
-
-
-
-#### 3xx
-
-**重定向使用Location指向的资源或者缓存中的资源, 同时重定向次数不应超过5次**
-
-- **300 Multiple Choices:** 内容协商
-- **301 Moved Permanently:** 永久重定向到另一个URI中
-  - 永杰重定向可以直接缓存
-- **302 Found:** 临时重定向
-- **304 Not Modified:** 告诉客户端缓存仍然可以复用
-  - 当客户端拥有可能过期的缓存时
-
-#### 4xx
-
-**客户端出现错误**
-
-- **400 Bad Request:** 服务器认为客户端出现了错误
-  - 如请求格式错误
-- **401 Unauthorized:** 用户认证信息缺失或者不正确
-- **403 Forbidden:** 服务器理解请求的含义, 但没有权限执行此请求
-- **404 Not Found**: 没有找到对应的资源
-- **405 Method Not Allowed**: 服务器不支持该method方法
-- **406 Not Acceptable**: (内容协商头部) 不支持该内容
-- **408 Request Timeout**: 服务器接收请求超时
-- **410 Gone**: 永久性的找不到资源了
-
-#### 5xx
-
-服务器端出现错误
-- **500 Internal Server Error:** 服务器内部错误
-  - 错误没办法细分就使用500
-- **501 Not Implemented**: 服务器不支持实现请求所需要的的功能
-- **502 Bad Gateway:** 代理服务器无法获取到合法响应
-- **503 Service Unabailable**: 服务器资源尚未准备好处理当前请求
-  - 原因: 服务器端做请求限速, 或并发请求限制
-- **504 Gateway Timeout**: 代理服务器无法及时从上游获得相应 
-- **505 HTTP Version Not Supported**: 服务器http版本不支持
 
 
 
@@ -339,3 +274,6 @@ cookie是存在于http的header中的
 
 
 
+## 参考
+
+- [https://www.w3.org/Protocols/History.html](https://www.w3.org/Protocols/History.html)
