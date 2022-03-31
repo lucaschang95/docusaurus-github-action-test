@@ -26,15 +26,12 @@
 
 ## 行级排版上下文
 
-**inline formatting context**
+inline formatting context
 
-#### ifc内排版规则
+### ifc内排版规则
 
 - 盒子在一行内水平摆放
 - 一行放不下, 换行显示
 - text-align决定一行内盒子的水平对齐
 - vertical-align决定一个盒子在行内的垂直对齐
 - 避开浮动元素
-
-
-
