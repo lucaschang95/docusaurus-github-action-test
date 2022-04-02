@@ -46,8 +46,6 @@ any, null, undefined, void
 
 void用来表示一个函数没有返回值
 
-
-
 ## literal types 字面类型
 
 - 只表示当前这个number / string
@@ -59,9 +57,6 @@ void用来表示一个函数没有返回值
 
 - union type是重要的一种类型
 - 用 | 分割开
-
-
-
 
 
 ## 枚举
