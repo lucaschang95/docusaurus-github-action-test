@@ -1,6 +1,6 @@
 # Location
 
-## 属性 properties
+## 属性
 
 ### ancestorOrigins
 
@@ -8,24 +8,26 @@
 
 - 检测iframe?
 
-### hash
+### `href`
 
-- 包含`#`
+> entire URL
+
+- 可读、可写
+- `window.location.href = xxx` 效果等同于 `window.location.assign(xxx)`
+
+### protocol
+
+- `http:` or `https:`
 
 ### host, hostname, port
 
 - hostname: domain of the URL
 - host: hostname + port
 
-### href
+### hash
 
-> whole URL, and allows the href to be updated
+- 包含`#`
 
-- `window.location.href = xxx` 效果等同于 `window.location.assign(xxx)`
-
-### protocol
-
-- `http:` or `https:`
 
 ### search
 
