@@ -1,5 +1,7 @@
 # popState事件
 
+> Window: popstate event
+
 `window.addEventListener('popState', xxx)`
 
 ## 触发条件

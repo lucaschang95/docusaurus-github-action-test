@@ -2,6 +2,17 @@
 
 ## 属性
 
+- `href`
+- `protocol`
+- `host`
+- `hostname`
+- `port`
+- `pathname`
+- `search`: 又叫 query
+- `hash`: 又叫 fragment
+
+
+
 ### ancestorOrigins
 
 > to determine, for example, whenever the document is being framed by a site which you don't expect it to be framed by
@@ -14,24 +25,6 @@
 
 - 可读、可写
 - `window.location.href = xxx` 效果等同于 `window.location.assign(xxx)`
-
-### protocol
-
-- `http:` or `https:`
-
-### host, hostname, port
-
-- hostname: domain of the URL
-- host: hostname + port
-
-### hash
-
-- 包含`#`
-
-
-### search
-
-- 包含`?`
 
 ## 方法 methods
 
