@@ -1,12 +1,33 @@
 # 表单（form）
 
+## 常见控件
+
+- Text Input: 文本输入
+- Textarea: 多行文本输入
+- Checkbox: 复选框
+- Radio: 单选框
+- Select: 下拉框
+- File: 文件上传
+- Clickable: 点击控件
+- Submit and Reset Button: 提交和重置按钮
+
+## HTML Form 表单提交请求时的关键属性
+
+- action: 提交时发起 HTTP 请求的 URI
+- method: 提交时发起 HTTP 请求的 http 方法
+  - GET: URI 参数的方式提交
+  - POST: 放在请求包体中提交
+- enctype: 表单内容在请求包体中的编码方式
+  - application/x-www-form-urlencoded: 参数名和参数值之间用 `&` 符号连接
+  - multipart/form-data
+    - boundary: 分隔符
+    - 每部分都有 HTTP 头部描述
 
 ## form标签
 
 **支持的属性**
 
 - **method**: 可以选择**GET**和**POST**
-
 
 ## Input标签
 

@@ -1,5 +1,7 @@
 # checkout
 
+> Switch branches or restore working tree files
+
 - 切换、检出分支
 - 保存现场，防止被乱搞
 
