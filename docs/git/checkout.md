@@ -2,11 +2,10 @@
 
 > Switch branches or restore working tree files
 
-- 切换、检出分支
-- 保存现场，防止被乱搞
+切换、检出分支，恢复文件
 
-`git checkout <name>`
+`git checkout <branch>`
 
-- 切换至已有分支
+`git checkout -b <branch> --track <remote>/<branch>`
 
-`git checkout -b <name> <SHA1>`
+新建一个分支，并且 track 远程分支

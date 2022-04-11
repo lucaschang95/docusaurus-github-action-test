@@ -4,6 +4,10 @@ CSS BEM命名规范
 
 并不是所有的css都适合使用BEM，全局的css样式没必要使用
 
+层级：
+
+page -> block -> element -> modifier
+
 ## 规范
 
 ```css

@@ -13,11 +13,13 @@
 
 - 大小: 4KB以内
 - 区分大小写
+- Cookie 头部可以存放多个 name/value 键值对
+- Set-Cookie 腿部一次只能传递一个 name/value 键值对
 
 ## Cookie属性
 
-- `Name`:  名字
-- `Value`: 值
+> 除了 name/value 外，cookie 还支持以下属性
+
 - `Domain`:
   - If specified, subdomains are always included
   - If unspecified, the attribute defaults to the same host that set the cookie, excluding subdomains.
@@ -30,7 +32,7 @@
   - 秒为单位，优先级高于Expires
 - `Secure`: 只能通过HTTPS发送
 - `HttpOnly`
-  - 开启后, 该cookie对于`document.cookie`的API关闭, 无法使用JavaScript访问
+  - 开启后, 无法使用JavaScript访问 （document.cookie, XMLHttpRequest, Request APIs）
 - `SameSite`
   - 开启后, 跨域请求不发送cookie
   - 可能会造成不好的用户体验
@@ -41,3 +43,9 @@
   - none
     - 同域，跨域请求都会发送该cookie
     - cookie必须携带 secure
+
+## 第三方 Cookie
+
+> 浏览器允许对于不安全域下资源（如广告图片）响应中的 Set-Cookie 保存，并在后续访问该域是自动添加 Cookie
+
+- 用户踪迹信息的收集

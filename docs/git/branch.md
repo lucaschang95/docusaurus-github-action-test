@@ -18,6 +18,7 @@
 `-u <upstream>`
 `--set-upstream-to=<upstream>`: Set up `<branchname>`'s tracking information so `<upstream>`
 `--unset-upstream`
+`--track`
 
 ### 删除分支
 
