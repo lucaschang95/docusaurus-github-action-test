@@ -1,19 +1,21 @@
 # 按钮 button
 
+## 属性 Attributes
 
+`autofocus`
 
-**autofocus**
+Only one element in a document can have this attribute.
 
-- 文档中只有一个元素可以拥有这个属性
+`disabled`
 
-**disabled**
+prevents the user from interacting with the button: it cannot be pressed or focused.
 
-**form**
+`form`
 
-- 决定要和哪个form关联
-- 填写关联form的id
-- 否则关联其父级的form元素
+The value of this attribute must be the id of a `<form>` in the same document. 默认情况下，button 和 ancestor form 相关联
 
-**type**
+`type`
 
-- submit, reset, button
+- `submit`
+- `reset`
+- `button`: has no default behavior
