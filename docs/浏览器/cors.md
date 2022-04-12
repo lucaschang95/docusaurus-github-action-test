@@ -27,7 +27,7 @@
 
 ## 简单请求`(simple request and )`
 
-simple request don't trigger a CORS preflight request
+> simple request don't trigger a CORS preflight request
 
 简单请求需满足:
 
@@ -38,7 +38,7 @@ simple request don't trigger a CORS preflight request
 
 发送时额外携带 **Origin**, 返回时额外携带 **Access-Control-Allow-Origin**
 
-简单请求的跨域访问
+简单请求的跨域访问 （简单请求也是有额外逻辑的！）
 
 - 浏览器构造HTTP请求中携带`Origin`头部告知server来自哪个域
 - server响应中携带`Access-Control-Allow-Origin`头部告知表示允许哪些域
@@ -48,15 +48,15 @@ simple request don't trigger a CORS preflight request
 
 - 预检请求:
   - 方法: option
-  - **Origin**
-  - **Access-Control-Request-Method**
-- **Access-Control-Request-Header**
+  - `Origin`头部: 必须携带
+  - `Access-Control-Request-Method`
+  - `Access-Control-Request-Header`
 - 预检请求响应:
-  - **Access-Control-Allow-Origin**
-  - **Access-Control-Allow-Method**
-  - **Access-Control-Allow-Headers**
-  - **Access-Control-Expose-Headers**    哪些响应头部可以供客户端使用
-  - **Access-Control-Allow-Credentials** 告知浏览器是否可以将 **Credentials** 暴露给客户端使用 
+  - `Access-Control-Allow-Method`
+  - `Access-Control-Allow-Headers`
+  - `Access-Control-Expose-Headers`: 哪些响应头部可以供客户端使用
+  - `Access-Control-Allow-Credentials`: 告知浏览器是否可以将 **Credentials** 暴露给客户端使用 
+    - credentials 包括 cookie, authorization, tls证书等
 - 正式请求:
   - 方法变为了用于ajax的方法, 众多头部也都在
   - 同时, 复杂请求其他的头部也都会加上
