@@ -15,7 +15,8 @@
 
 ### `integrity`
 
-
 ### `type`
 
 - `module`
+
+`crossorigin`

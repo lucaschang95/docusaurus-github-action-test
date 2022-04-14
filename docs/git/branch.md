@@ -20,7 +20,13 @@
 `--unset-upstream`
 `--track`
 
+### 创建分支
+
+`git branch <branchname>`: 创建分支
+
+creates a new branch head named `<branchname>` which points to the current HEAD
+
 ### 删除分支
 
-- `git branch -d <branch>`
-- `git branch -D <branch>`
+- `git branch -d <branchname>`
+- `git branch -D <branchname>`
