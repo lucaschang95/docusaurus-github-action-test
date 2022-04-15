@@ -1,10 +1,12 @@
 # Array数组
 
+> Array is an indexed collection that can hold data of any type
 
+数组是 indexed collection, 对象是 keyed collection
 
 ## 创建数组
 
-#### 字面量
+### 字面量
 
 - `[element0, element1...]`
 
@@ -16,7 +18,9 @@
 
 ## 静态方法
 
-### from
+`Array.from`
+
+creates a new, shallow-copied Array instance from an array-like or iterable object.
 
 - Array.from(obj)
   - array-like objects
@@ -183,35 +187,26 @@
 - 原数组改变
 - 返回被push的元素
 
-
-
 #### `Array.prototype.pop()`
 
 - 原数组改变
 - 返回被pop的元素
-
-
 
 #### `Array.prototype.shift()`
 
 - 原数组改变
 - 返回被shift出去的元素
 
-
-
 #### `Array.prototype.unshift()`
 
 - 原数组改变
 - 返回unshift进来的元素
-
-
 
 ####  `Array.prototype.filter()`
 
 - `arr.prototype.filter(callback(element, index, array))`
   -  如果返回false, 那么这个element就会被过滤掉
   - 不改变原数组
-
 
 
 #### `Array.prototype.includes()`
@@ -268,15 +263,6 @@
   - return less than 0, 那么a的 index靠前. 
   - greater than 0, 那么b的index靠前
   - 0, remained
-
-
-
-
-
-
-
-
-
 
 ### Destructuring assignment
 unpack value from arrays, or objects, into distinct variables.
