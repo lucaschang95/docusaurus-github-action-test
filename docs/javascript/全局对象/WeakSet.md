@@ -6,3 +6,4 @@
 
 1. only objects
 2. reference to the object is weak, gc if no other reference
+3. WeakSets are not enumerable
