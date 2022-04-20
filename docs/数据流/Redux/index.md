@@ -5,9 +5,9 @@
 分为：
 
 1. redux: keep state
-2. react-redux: bind state to React view
+2. react-redux: bind state to React view (用 react 一套来实现 data 和 UI 的 binding)
 
-## When should I use Redux?
+## 什么时候需要使用 Redux? When should I use Redux?
 
 Redux is more useful when:
 
@@ -18,15 +18,15 @@ Redux is more useful when:
 
 ## terminology
 
-###### Actions
+### Actions
 
 An action is a plain JavaScript object that has a type field. You can think of an action as an event that describes something that happened in the application.
 
-###### Action Creators
+### Action Creators
 
 创建action对象
 
-###### Reducer
+### Reducer
 
 You can think of a reducer as an event listener which handles events based on the received action (event) type
 
@@ -34,7 +34,7 @@ You can think of a reducer as an event listener which handles events based on th
 - They are not allowed to modify the existing state. Instead, they must make immutable updates, by copying the existing state and making changes to the copied values.
 - They must not do any asynchronous logic, calculate random values, or cause other "side effects"
 
-###### store
+### store
 
 所有功能存在store里面
 
@@ -44,6 +44,6 @@ The only way to update the state is to call store.dispatch() and pass in an acti
 
 > You can think of dispatching actions as "triggering an event"
 
-###### Selectors
+### Selectors
 
 Selectors are functions that know how to extract specific pieces of information from a store state value
