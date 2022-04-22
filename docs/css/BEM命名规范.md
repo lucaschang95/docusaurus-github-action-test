@@ -15,6 +15,8 @@ page -> block -> element -> modifier
 
 .block__element {} 低级别的组件
 
+.block__element--modifier {} 低级别组件的不同状态
+
 .block--modifier {} 组件的的不同状态、不同版本
 ```
 

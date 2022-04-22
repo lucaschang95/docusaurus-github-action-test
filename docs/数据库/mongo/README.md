@@ -1,7 +1,5 @@
 # MongoDB
 
-
-
 ## 概念
 
 database 数据库
@@ -16,8 +14,6 @@ index 索引
 
 primay key 主键
 
-
-
 ## 数据库操作
 
 库名：test
@@ -28,13 +24,9 @@ primay key 主键
 
 删除: db.dropDatabase( )
 
-
-
 ## 集合操作
 
 创建: db.createCollection('collection_name')
-
-
 
 ## 文档操作
 
@@ -50,20 +42,6 @@ primay key 主键
 
 ### 更新
 
-db.collection.update(
-	<query>,
-	<updateObj>,
-	{
-		upsert: <boolean>,
-		multi: <boolean>
-	}
-)
-
-
-
-
-
-
-
-
-
+```javascript
+db.collection.update(query, updateObj, {upsert: boolean, multi: boolean})
+```
