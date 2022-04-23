@@ -7,3 +7,9 @@
 ```shell
 rollup main.js --file bundle.js --format iife
 ```
+
+## 打包格式
+
+1. iife (Immediately Invoked Function Expression)
+2. cjs
+3. umd
