@@ -1,5 +1,9 @@
 # Git
 
+## what is git?
+
+A Git repository is a collection of objects and references. Objects have relationships with each other, and references point to objects and to other references. The main objects in a Git repository are commits, but other objects include blobs and trees. The most important references in Git are branches, which you can think of as labels you put on a commit.
+
 ## git的几大区域
 
 - 工作区 working directory

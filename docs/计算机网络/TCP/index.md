@@ -15,36 +15,6 @@ TCP协议是面向连接的, 可靠的, 基于字节流的传输协议.
 - 双向传递
 - 拥塞控制
 
-## 三次握手
-
-### 握手的目标
-
-- 同步Sequence序列号
-- 交换TCP通讯参数
-  - MSS, 窗口比例因子, 选择性确认, 指定校验和算法
-
-#### 过程
-
-- Client: SYN, seq = x; (同步 + 同步序列号)
-- Server: SYN, seq = x + 1 ; ACK, ack = y; (确认 + 确认序列号 同步 + 同步序列号)
-- Client: ACK, ack = y + 1;
-
-#### 握手时状态变迁
-
-- Client:
-  - CLOSED, SYN-SENT, ESTABLISHED
-- Server:
-  - CLOSED, LISTEN, SYN-RECEIVED, ESTABLISHED
-
-
-> MSS: Max Segment Size
-- TCP承载数据大小, 不包含TCP头部大小
-- 选择目的
-    - 尽量使每个TCP Segment携带更多信息
-    - 防止TCP Segment被某个设备的IP层基于MTU拆分
-- 默认MSS: 536 bytes (MTU: 576 bytes - 20 bytes IP headers - 20 bytes TCP headers)
-- 握手阶段协商MSS
-
 ## 四次挥手
 
 TCP全双工, 两个方向单独关闭
@@ -91,30 +61,6 @@ RTO (Retranmission TimeOut)
 可用窗口: 3
 
 ## 拥塞控制
-
-慢启动，拥塞避免，快速重传，快速回复
-
-- 拥塞窗口，动态变化
-- 判断出现拥塞的依据，没有按时收到确认报文
-
-### 慢启动 slow start
-
-- 拥塞窗口
-- 发送窗口 = min(对方接收窗口, 拥塞窗口);
-- 每收到一个ACK, 拥塞窗口扩充一倍
-
-### 拥塞避免 congestion avoidance
-
-- 达到阈值后, 以线性方式增加
-
-#### 快速重传 fast retransmission
-
-- 接收方接收到失序segment, **立刻发送它所期待的ACK序列号**
-- 发送方接收到3个重复的ACK时, 不再等待RTO定时器, 立刻重发报文段
-
-#### 快速恢复 fast recoverey
-
-- 拥塞窗口不必降到1 (比如降低一半)即可
 
 ## 可靠传输
 
