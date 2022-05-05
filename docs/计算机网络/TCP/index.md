@@ -73,7 +73,7 @@ RTO (Retranmission TimeOut)
 
 ## SYN攻击
 
-#### 攻击方法
+### 攻击方法
 
 - 攻击者发送TCP SYN
 - 服务器返回ACK之后, 攻击者不进行确认

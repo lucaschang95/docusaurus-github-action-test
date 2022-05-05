@@ -1,4 +1,9 @@
-# Event loop
+# 事件循环 Event loop
+
+## `process.nextTick`
+
+- callback 会在当次的 event loop 结束后, 下一次 event loop 开始前, 被调用
+- `setTimeout` 和 `setImmediate` 都是在下一次 event loop 中进行调用
 
 ## 机制解析
 
