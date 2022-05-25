@@ -1,6 +1,6 @@
 # 相等 (equality)
 
-> JavaScript提供3种操作符来判断相等: loose equality, strict equality, Object.is()
+- JavaScript 提供了3种操作符来判断相等: loose equality, strict equality, Object.is()
 
 ## `===`
 

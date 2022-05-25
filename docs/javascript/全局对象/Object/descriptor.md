@@ -1,17 +1,21 @@
 # Descriptor
 
-> `Object.defineProperty(obj, prop, descriptor)`
+## 基础
 
-1. 对象属性的 descriptor 分为 data descriptor 和 accessor descriptor （默认是 data descriptor）
-2. `configurable` 和 `enumerable` 在两种 descriptor 都有
-3. `data descriptor` 包括 `value`, `writable`
-4. `accessor descriptor` 包括 `get` 和 `set`
+对象的每个属性都有对应的 property descriptor
 
-## configurable
+- 对象属性的 descriptor 分为 data descriptor 和 accessor descriptor （默认是 data descriptor）
+- 属性都是可选的, 都有默认值
+- `configurable` 和 `enumerable` 在两种 descriptor 都有
+- `data descriptor` 包括 `value`, `writable`
+- `accessor descriptor` 包括 `get` 和 `set`
 
-1. whether the property can be deleted
-2. whether its attributes (other than value and writable) can be changed
-3. Defaults to false.
+## `configurable`
+
+`configurable` 属性控制了:
+
+1. 属性类型是否可以改变 (从 data descriptor 变为 accessor descriptor)
+2. 属性是否可以删除
 
 ## enumerable
 

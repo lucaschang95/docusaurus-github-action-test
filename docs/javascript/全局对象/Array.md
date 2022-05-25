@@ -35,8 +35,6 @@ creates a new, shallow-copied Array instance from an array-like or iterable obje
 - Array.of(a,  b, c...)
 - 将a, b, c等构造为一个数组
 
-
-
 ## 方法
 
 ### concat
@@ -110,7 +108,7 @@ creates a new, shallow-copied Array instance from an array-like or iterable obje
 
 - key值的Iterator obj
 
-- next, 
+- next
 
 ### lastIndexOf
 
@@ -205,26 +203,22 @@ creates a new, shallow-copied Array instance from an array-like or iterable obje
 ####  `Array.prototype.filter()`
 
 - `arr.prototype.filter(callback(element, index, array))`
-  -  如果返回false, 那么这个element就会被过滤掉
+  - 如果返回false, 那么这个element就会被过滤掉
   - 不改变原数组
-
 
 #### `Array.prototype.includes()`
 
 - `arr.includes(valueToFind[, fromIndex])`
 - `fromIndex`: 可正可负
 
-
-
 #### Array.prototype.reduce()
 
 - `arr.reduce(reducer[, initialValue])`
 - reducer接受4个参数
-  - acc
+  - acc: accumulator 值
   - cur
   - idx
-  - src
-
+  - arr
 
 
 #### `Array.prototype.slice()`
@@ -233,15 +227,11 @@ creates a new, shallow-copied Array instance from an array-like or iterable obje
 - 不会改变原数组
 - 返回shallow copy
 
-
-
 #### `Array.prototype.indexOf()`
 
 - `arr.indexOf(searchElement[, fromIndex])`
 
 - 没找到返回 -1;
-
-
 
 #### Array.prototype.splice()
 

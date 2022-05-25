@@ -106,6 +106,8 @@ poll 阶段, 如果 poll queue 已经空了, 而且有 `setImmediate()`, 就会�
 - check: setImmediate()的回调
 - close callbacks
 
+![https://cf2.ppt-online.org/files2/slide/j/JLUkpIoi9CZqGxtBedWsrgnMOjA80fQa4DSP3u7lz6/slide-8.jpg](https://cf2.ppt-online.org/files2/slide/j/JLUkpIoi9CZqGxtBedWsrgnMOjA80fQa4DSP3u7lz6/slide-8.jpg)
+
 ## 参考
 
 - <https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/>
