@@ -44,3 +44,7 @@ git merge --continue
 `--[no-]verify`
 
 bypassed the pre-merge and commit-msg hooks
+
+`--[no-]squash`
+
+- 进行 squash merge
