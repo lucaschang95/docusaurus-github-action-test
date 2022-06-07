@@ -81,3 +81,10 @@ assert.strictEqual(require('node:fs'), realFs);
 ### `module.loaded`
 
 该 script 是否执行完毕
+
+## 模块入口
+
+两个字段: `main` 和 `exports`
+
+- `main` 的兼容性更好
+- `exports` 字段与 `main` 功能相同, 而且能防止 package 内其他文件的导出

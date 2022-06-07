@@ -32,11 +32,15 @@
 
 `Object.create(proto, propertiesObject)`
 
-### `Object.keys()`
+### `Object.keys()` 和 `Object.getOwnPropertyNames()`
 
 1. 非 Symbol 属性
 2. own enumerable property
 
+相比之下，`Object.getOwnPropertyNames()` 会返回 enumerable false 的属性
+
 ## 实例方法
 
 ### `Object.prototype.propertyIsEnumerable()`
+
+## 对象的属性遍历顺序

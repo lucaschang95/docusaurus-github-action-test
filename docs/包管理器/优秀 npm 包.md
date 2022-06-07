@@ -4,4 +4,7 @@
 
 - minimist
 
-## 
+## 环境变量
+
+- cross-env
+- dotenv
