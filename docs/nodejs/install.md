@@ -1,7 +1,5 @@
 # install
 
-
-
 ## 模块的安装过程
 
 - npm install
