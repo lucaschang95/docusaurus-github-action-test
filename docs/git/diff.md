@@ -20,3 +20,9 @@ show changes between commits, commit and working tree, etc
 ## 两个commit之间的差异
 
 `git diff [<options>] [<commit>][<commit>][--] [<path>…​]`
+
+## 常见操作
+
+1. 查看某个 commit 引入的变化
+
+`git diff [commit]~ [commit]`

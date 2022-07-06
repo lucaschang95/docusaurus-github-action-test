@@ -19,7 +19,7 @@ any URL scheme supported by browsers, 可以是其他URL scheme，如 `data:`
 - `no-referrer-when-downgrade`: http时，不发送referrer
 - `origin`: 发送当前页面的 referrer
 - `same-origin`: 同源请求时发送
-- `strict-origin`: 
+- `strict-origin`:
 
 ## target
 
@@ -27,8 +27,6 @@ any URL scheme supported by browsers, 可以是其他URL scheme，如 `data:`
 - _blank: a new tab
 - _parent
 - _top
-
-
 
 ## rel
 
