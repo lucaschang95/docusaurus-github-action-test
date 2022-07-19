@@ -148,7 +148,7 @@ creates a new, shallow-copied Array instance from an array-like or iterable obje
 
 ### slice
 
-- slice(start, end) 
+- slice(start, end)
 - start和end是optional
 - 不改变原数组，return a shallow cp
 - slice其实是在access这个数组的一部分
@@ -167,6 +167,7 @@ creates a new, shallow-copied Array instance from an array-like or iterable obje
 
 ### splice
 
+- in-place
 - splice(start, deleteCount, element1, element2 ....)
 - 作用：移除，添加元素
 - 返回被移除的元素
@@ -200,7 +201,7 @@ creates a new, shallow-copied Array instance from an array-like or iterable obje
 - 原数组改变
 - 返回unshift进来的元素
 
-####  `Array.prototype.filter()`
+#### `Array.prototype.filter()`
 
 - `arr.prototype.filter(callback(element, index, array))`
   - 如果返回false, 那么这个element就会被过滤掉
@@ -220,7 +221,6 @@ creates a new, shallow-copied Array instance from an array-like or iterable obje
   - idx
   - arr
 
-
 #### `Array.prototype.slice()`
 
 - `arr.slice([begin[, end]])`
@@ -238,13 +238,9 @@ creates a new, shallow-copied Array instance from an array-like or iterable obje
 - `arr.splice(start[, deleteCount[, item1...]])`
 - 删除一些, 加入一些
 
-
-
 #### Array.prototype.map()
 
 - syntax：`newArray = arr.map(function callback(currentValue[, index[, array]]) { return element for new_array}, this arg)`
-
-
 
 #### Sort
 
@@ -255,7 +251,9 @@ creates a new, shallow-copied Array instance from an array-like or iterable obje
   - 0, remained
 
 ### Destructuring assignment
+
 unpack value from arrays, or objects, into distinct variables.
+
 ```javascript
 // destructure array
 let [name, age] = ['John', 26];
@@ -277,39 +275,26 @@ let {[key]: foo} = {z: 'bar'};
 1. 赋值时解构
 2. 命名函数是进行解构
 
-
 通过function返回array, 在通过destructuring, 可以使得返回值使用更加灵活.
 
 - 选择性解构赋值
 
-
-
-
-
 ### Array.prototype.sort()
 
 `sort([compare func(a, b)])`
+
 - if `compare func` return
   - less than 0, a index < b index
   - greater than 0, a index < b index
-  - 
 - AESC order
 
-
-
-
-
 ## 遍历Iteration
-
-
 
 #### `Array.prototype.forEach()`
 
 - syntax: `arr.forEach(callback(currentValue [, index [, array]])[, thisArg])`
 - 遍历顺序: ASC, 升序
 - sparse array中不会遍历到
-
-
 
 
 
