@@ -111,3 +111,5 @@ Object instanceof Function
 - **Function** 是 **Object** 的一个实例好理解
   - **JavaScript对于函数的定义就是如此**
 - **Object** 其实也是一个构造函数, 所以也是函数的一个实例
+
+使用`obj.constructor`获取该对象的构造函数
