@@ -11,7 +11,6 @@
 - JS 常见的 Array/Set/Map/String 都实现了 Iterable 协议
 - Iterable protocol 允许 JavaScript 对象自定义遍历行为
 
-
 #### 如何成为一个 Iterable 的对象？
 
 - 自身或者原型链上的对象 must implement the `@@iterator` method （使用 Symbol.iterator 进行访问）

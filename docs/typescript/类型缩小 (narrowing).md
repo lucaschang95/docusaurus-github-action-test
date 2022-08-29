@@ -1,15 +1,12 @@
-# 类型缩小
+# 类型缩小 (narrowing)
+
+> overlays type analysis on JavaScript’s runtime control flow constructs
+
+在 ts 类型系统中，有下面几种方法可以进行 narrowing
 
 ## typeof
 
-"string"
-"number"
-"bigint"
-"boolean"
-"symbol"
-"undefined"
-"object"
-"function"
+ts 硬编码了对象和 typeof 返回值的映射关系
 
 ## Truthiness narrowing 真值缩小
 
@@ -69,4 +66,33 @@ function move(animal: Fish | Bird) {
 }
 ```
 
-# instanceof narrowing
+## instanceof narrowing
+
+## Assignments 赋值
+
+TypeScript looks at the right side of the assignment and narrows the left side appropriately.
+
+## Control flow analysis 流程控制分析
+
+## 类型预测 type predicate
+
+显式的告诉 ts，`isFish`返回的值与 pet 的类型强关联
+
+```ts
+function isFish(pet: Fish | Bird): pet is Fish {
+  return (pet as Fish).swim !== undefined;
+}
+
+function getSmallPet() {
+    return Math.random() > 0.5 ? new Fish() : new Bird();
+}
+
+// Both calls to 'swim' and 'fly' are now okay.
+let pet = getSmallPet();
+ 
+if (isFish(pet)) {
+  pet.swim();
+} else {
+  pet.fly();
+}
+```
