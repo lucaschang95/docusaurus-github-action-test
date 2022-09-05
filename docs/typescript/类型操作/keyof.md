@@ -6,7 +6,7 @@
 
 下面这个例子里，P -> `"x" | "y"`
 
-```typescript
+```ts
 type Point = { x: number; y: number };
 type P = keyof Point;
 ```

@@ -49,3 +49,11 @@
 > 浏览器允许对于不安全域下资源（如广告图片）响应中的 Set-Cookie 保存，并在后续访问该域是自动添加 Cookie
 
 - 用户踪迹信息的收集
+
+## `document.cookie`
+
+1. Read all cookies accessible from this location
+
+`allCookies = document.cookie;`
+
+2. 

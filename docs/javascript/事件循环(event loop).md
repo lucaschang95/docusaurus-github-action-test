@@ -49,7 +49,7 @@
 
 主线程代码 -> 渲染 -> 主线程代码 -> 渲染
 
-主线程代码 -> webapi -> 任务队列 -> 塞入主线程执行 -> 渲染
+主线程代码 -> 触发 webapi -> 任务队列 -> 塞入主线程执行 -> 渲染
 
 #### 宏任务
 
@@ -68,7 +68,7 @@
 - process.nextTick
 - MutationObserver（html5新特性）
 
-
 ## reference
 
 - <https://juejin.cn/post/6844904050543034376>
+- <https://html.spec.whatwg.org/multipage/webappapis.html#event-loop>

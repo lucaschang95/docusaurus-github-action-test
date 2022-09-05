@@ -11,11 +11,9 @@ signal can be:
 - `reload`
 - `reopen`
 
-
 events, http, server, location
 
 - server in http, location in server
-
 
 ## 处理流程
 
