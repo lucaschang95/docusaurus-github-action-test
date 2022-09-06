@@ -1,5 +1,7 @@
 # dockerfile
 
+> A Dockerfile is simply a text-based script of instructions that is used to create a container image
+
 builds an image from a Dockerfile and a context
 
 ## COPY
