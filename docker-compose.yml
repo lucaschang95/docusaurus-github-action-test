@@ -2,12 +2,12 @@ version: "3.8"
 
 services:
   nodejs:
-    image: lucaschang95/node-pnpm:18
+    image: node:18-alpine
     volumes:
       - ./:/usr/src/fe-notes-docusaurus
       - web_data:/usr/src/fe-notes-docusaurus/build
       - sql_data:/usr/src/sql_lite
-    command: sh -c "cd /usr/src/fe-notes-docusaurus && yarn && yarn build && node /usr/src/fe-notes-docusaurus/apis/index.js"
+    command: sh -c "cd /usr/src/fe-notes-docusaurus && npm install -g node-gyp && yarn && yarn build && node /usr/src/fe-notes-docusaurus/apis/index.js"
     # command: sh -c "cd /usr/src/fe-notes-docusaurus && yarn && yarn build && node /usr/src/fe-notes-docusaurus/apis/index.js"
   nginx:
     image: nginx:stable

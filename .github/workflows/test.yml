@@ -2,7 +2,7 @@ name: Docker compose test
 
 on:
   push:
-    branches: [ test ]
+    branches: [ test, master ]
 
 jobs:
   build:

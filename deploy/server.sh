@@ -3,7 +3,7 @@ echo "deploy start"
 
 cd /usr/src/fe-notes-docusaurus
 
-docker-compose down -d
+docker-compose down
 # npm i -g yarn
 
 # yarn
