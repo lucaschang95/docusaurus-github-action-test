@@ -8,6 +8,27 @@ import HomepageFeatures from '../components/HomepageFeatures';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+
+  const like = () => {
+    fetch(new URL(`${window.location.origin}/api/like/add`), { method: 'POST'})
+      .then(updateCount)
+  };
+
+  const [count, setCount] = React.useState(0);
+
+  const updateCount = React.useCallback(() => {
+    fetch(new URL(`${window.location.origin}/api/like`), { method: 'GET'})
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        setCount(data?.length);
+      });
+  }, []);
+
+  React.useEffect(() => {
+    updateCount();
+  }, []);
+
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -16,10 +37,12 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            onClick={like}
+          >
+            点赞
           </Link>
         </div>
+        <div>目前点赞数：{count}</div>
       </div>
     </header>
   );
