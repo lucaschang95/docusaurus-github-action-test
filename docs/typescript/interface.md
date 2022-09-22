@@ -1,8 +1,6 @@
 # 接口（interface）
 
-
-
-#### 可选、只读属性
+## 可选、只读属性
 
 ```typescript
 interface Person{
@@ -15,12 +13,10 @@ interface Person{
 
 - 接口可以定义多次，会被自动合并为单个接口。
 
-
-
 - An *interface declaration* is another way to name an object type:
 - 优势：可扩展
 
-```
+```ts
 interface Bear extends Animal {
   honey: boolean
 }

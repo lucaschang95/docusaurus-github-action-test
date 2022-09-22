@@ -38,21 +38,9 @@ CSS(Cascading Style Sheets), style and lay out the web
 
 ## 前端工程化
 
-#### 解决方案
-
-- 制定开发方案
-- 分治
-- 组件化
-
-
-
-
-
 ## link和@import区别
 
 **两个层面上的东西**
-
-
 
 #### 属性不同
 

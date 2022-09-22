@@ -53,10 +53,10 @@
 
 #### 宏任务
 
-- 包括: script标签
-- setTimeout
-- setInterval
-- setImmediate
+- 全局 javascript 代码，包括: script标签，or console repl
+- event 的回调, eg. onClick, onHover, etc.
+- setTimeout, setInterval 的回调
+- setImmediate ? 这个还没有标准化
 - requestAnimationFrame
 
 #### 微任务
