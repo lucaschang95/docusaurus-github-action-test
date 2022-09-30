@@ -1,12 +1,12 @@
 const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
+console.log('1111process.env.SQLITE_DB_LOCATION', process.env.SQLITE_DB_LOCATION)
 const location = process.env.SQLITE_DB_LOCATION || '/usr/src/sql_lite/sql.db';
 
 let db, dbAll, dbRun;
 
 function init() {
     const dirName = require('path').dirname(location);
-    console.log('dirName', dirName);
     if (!fs.existsSync(dirName)) {
         fs.mkdirSync(dirName, { recursive: true });
     }
@@ -49,6 +49,15 @@ async function getItems() {
                     }),
                 ),
             );
+        });
+    });
+}
+
+async function getItemCount() {
+    return new Promise((acc, rej) => {
+        db.all('SELECT COUNT(*) FROM like_items', (err, rows) => {
+            if (err) return rej(err);
+            acc(rows);
         });
     });
 }
@@ -99,6 +108,7 @@ module.exports = {
     teardown,
     getItems,
     getItem,
+    getItemCount,
     storeItem,
     updateItem,
 };

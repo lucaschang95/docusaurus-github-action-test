@@ -4,9 +4,17 @@ lightweight轻量级的（相比于虚拟机）
 
 separate your application from your infrastructure
 
+## 架构图
+
+![架构图](https://docs.docker.com/engine/images/architecture.svg)
+
 ## 基本概念
 
-镜像（image），容器（container），仓库
+- 镜像 image
+- 容器 container
+- 仓库 registry
+- docker client
+- docker daemon
 
 ## 基本操作
 
@@ -22,8 +30,6 @@ docker image build -t koa-demo:0.0.1 .
 
 ### 生成容器
 
-
-
 #### 启动容器
 
 docker container run --rm -p 8000:3000 -it koa-demo /bin/bash
@@ -33,7 +39,6 @@ docker container run --rm -p 8000:3000 -it koa-demo /bin/bash
 docker container start
 
 用来启动已经生成
-
 
 #### 终止容器
 
@@ -46,7 +51,6 @@ gracefully
 #### 进入容器
 
 `docker container exec -it [containerID] /bin/bash`
-
 
 ## reference
 

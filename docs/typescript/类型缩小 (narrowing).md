@@ -4,6 +4,18 @@
 
 在 ts 类型系统中，有下面几种方法可以进行 narrowing
 
+## ts通过什么进行类型缩小？
+
+- typeof
+- if else if else
+- switch
+- 真值校验
+- 强等和弱等
+- in 操作符
+- instance of
+- 第一次赋值时候 let a = x ? '1' : 1
+  - a的type就是 number | string
+
 ## typeof
 
 ts 硬编码了对象和 typeof 返回值的映射关系

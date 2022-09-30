@@ -4,7 +4,7 @@
 
 ## 语法
 
-`git show [<options>] [<object>...]
+`git show [<options>] [<object>...]`
 
 - 可以展示 blobs, trees, tags, commits
 

@@ -1,17 +1,24 @@
+const fs = require('fs');
+const path = require('path');
+if (process.env.node_env === 'development') {
+    require('dotenv').config({ path: path.resolve(__dirname, '../.development.env')})
+}
 const express = require('express');
 const app = express();
-const db = require('../persistence');
 const getItems = require('../routes/getItems');
+const getItemCount = require('../routes/getItemCount');
 const addItem = require('../routes/addItem');
+const db = require('../persistence');
 
-const port = 3000;
+const PORT = 3000;
 
 app.get('/api/like', getItems);
+app.get('/api/like/count', getItemCount);
 app.post('/api/like/add', addItem);
 
 
 db.init().then(() => {
-    app.listen(3000, () => console.log('Listening on port 3000'));
+    app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 }).catch((err) => {
     console.error(err);
     process.exit(1);

@@ -1,24 +1,22 @@
 version: "3.8"
 
 services:
-  nodejs:
-    image: node:18-alpine
-    volumes:
-      - ./:/usr/src/fe-notes-docusaurus
-      - web_data:/usr/src/fe-notes-docusaurus/build
-      - sql_data:/usr/src/sql_lite
-    command: sh -c "cd /usr/src/fe-notes-docusaurus && npm install -g node-gyp && yarn && yarn build && node /usr/src/fe-notes-docusaurus/apis/index.js"
-    # command: sh -c "cd /usr/src/fe-notes-docusaurus && yarn && yarn build && node /usr/src/fe-notes-docusaurus/apis/index.js"
   nginx:
     image: nginx:stable
     ports:
       - 80:80
     volumes:
       - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
-      - web_data:/usr/share/nginx/html:ro
-    depends_on:
-      - nodejs
+  frontend:
+    image: node:18-alpine
+    volumes:
+      - ./:/usr/src/fe-notes-docusaurus
+    command: sh -c "cd /usr/src/fe-notes-docusaurus && npm run start"
+  nodejs:
+    image: node:18-alpine
+    volumes:
+      - ./:/usr/src/fe-notes-docusaurus
+    command: sh -c "cd /usr/src/fe-notes-docusaurus && npm install -g node-gyp && npm rebuild && node_env=development npm run start:express"
 
 volumes:
-  web_data:
   sql_data:

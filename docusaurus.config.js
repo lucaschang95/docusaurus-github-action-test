@@ -15,7 +15,6 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "lucaschang95",
   projectName: "fe-notes-docusaurus",
-
   presets: [
     [
       "classic",

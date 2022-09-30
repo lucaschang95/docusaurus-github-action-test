@@ -17,11 +17,11 @@ function HomepageHeader() {
   const [count, setCount] = React.useState(0);
 
   const updateCount = React.useCallback(() => {
-    fetch(new URL(`${window.location.origin}/api/like`), { method: 'GET'})
+    fetch(new URL(`${window.location.origin}/api/like/count`), { method: 'GET'})
       .then(response => response.json())
       .then(data => {
-        console.log(data)
-        setCount(data?.length);
+        console.log('data', data)
+        setCount(data?.count ?? 0);
       });
   }, []);
 
