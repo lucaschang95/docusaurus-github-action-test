@@ -12,7 +12,7 @@ services:
     image: node:18-alpine
     volumes:
       - ./:/usr/src/fe-notes-docusaurus
-    command: sh -c "cd /usr/src/fe-notes-docusaurus && yarn && yarn build
+    command: sh -c "cd /usr/src/fe-notes-docusaurus && yarn && yarn build"
   nodejs:
     image: node:18-alpine
     volumes:
