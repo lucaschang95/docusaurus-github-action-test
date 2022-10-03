@@ -42,6 +42,12 @@ primay key 主键
 
 ### 更新
 
-```javascript
-db.collection.update(query, updateObj, {upsert: boolean, multi: boolean})
 ```
+db.collection.update(
+ <query>,
+ <updateObj>,
+ {
+  upsert: <boolean>,
+  multi: <boolean>
+ }
+)
