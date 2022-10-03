@@ -1,8 +1,8 @@
-name: Docker compose test
+name: Docker compose deploy
 
 on:
   push:
-    branches: [ test, master ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -10,8 +10,7 @@ jobs:
     timeout-minutes: 15
     strategy:
       matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [18.x]
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
