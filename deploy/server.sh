@@ -3,7 +3,7 @@ echo "deploy start"
 
 cd /usr/src/fe-notes-docusaurus
 
-docker-compose down
+docker-compose down --remove-orphans
 
 docker-compose up
 
