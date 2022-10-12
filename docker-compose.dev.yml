@@ -18,7 +18,7 @@ services:
     image: node:18-alpine
     volumes:
       - ./:/usr/src/fe-notes-docusaurus
-    command: sh -c "cd /usr/src/fe-notes-docusaurus && npm install -g node-gyp && npm rebuild && node_env=development npm run start:express"
+    command: sh -c "cd /usr/src/fe-notes-docusaurus && node_env=development npm run start:express"
 
 volumes:
   sql_data:
