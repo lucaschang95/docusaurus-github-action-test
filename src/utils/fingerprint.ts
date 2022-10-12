@@ -1,11 +1,17 @@
 import FingerprintJS from '@fingerprintjs/fingerprintjs';
 const storageId = 'fe-note-docusaurus-fp';
-const fpPromise = FingerprintJS.load();
+
+let fpPromise;
+if (typeof window === 'undefined') {
+  fpPromise = null;
+} else {
+  fpPromise = FingerprintJS.load();
+}
 
 export const getFingerprint = async () => {
   let res: string;
   res = localStorage.getItem(storageId);
-  if (!res) {
+  if (!res && typeof window !== 'undefined') {
     const fp = await fpPromise;
     const result = await fp.get();
     if (result?.visitorId) {

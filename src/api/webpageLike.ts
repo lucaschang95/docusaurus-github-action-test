@@ -1,6 +1,4 @@
-import FingerprintJS from '@fingerprintjs/fingerprintjs';
 const storageId = 'fe-note-docusaurus-fp';
-const fpPromise = FingerprintJS.load();
 
 // 获取remote点赞状态
 export const getLikeStatus = async (id: string) => {
