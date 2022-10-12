@@ -7,6 +7,8 @@ services:
       - 80:80
     volumes:
       - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - frontend
   frontend:
     image: node:18-alpine
     volumes:

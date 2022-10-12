@@ -4,7 +4,7 @@ container 之间的 networking
 
 > If two containers are on the same network, they can talk to each other. If they aren't, they can't.
 
-## Create the network.
+## Create the network
 
 docker network create todo-app
 
@@ -22,3 +22,8 @@ A bridge can be a hardware device or a software device running within a host mac
 - 不同 network 下面的 containers 不可以直接通信
   - 只能在 os 层面通过修改 iptables 来实现
 
+## 连接 container 到 network
+
+```bash
+docker network connect [OPTIONS] NETWORK CONTAINER
+```

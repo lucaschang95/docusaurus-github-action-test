@@ -6,3 +6,11 @@
 
 `-p`
 pulish a container's ports to the host
+
+## 示例
+
+### 连接到网络
+
+```bash
+docker run -itd --network=my-net busybox
+```

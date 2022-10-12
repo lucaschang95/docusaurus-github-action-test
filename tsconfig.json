@@ -1,5 +1,7 @@
 {
+  "extends": "@tsconfig/docusaurus/tsconfig.json",
   "compilerOptions": {
+    "jsx": "react",
     "target": "es5",
     "module": "commonjs",
     "outDir": "out",

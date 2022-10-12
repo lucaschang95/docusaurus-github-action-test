@@ -4,7 +4,7 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 
 ## 本地开发
 
-`docker compose -f docker-compose.dev.yml up`
+`docker compose -f docker-compose.dev.yml up --no-build`
 
 ## Installation
 

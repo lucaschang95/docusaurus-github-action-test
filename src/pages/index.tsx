@@ -5,23 +5,27 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
+import { getFingerprint } from '../utils/fingerprint';
+import { getLikeCount, getLikeStatus, likeWebpage } from '../api/webpageLike';
+
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
 
-  const like = () => {
-    fetch(new URL(`${window.location.origin}/api/like/add`), { method: 'POST'})
-      .then(updateCount)
+  const like =  async () => {
+    let id = await getFingerprint();
+    const liked = await getLikeStatus(id);
+    if (!liked) {
+      likeWebpage(id)
+    }
   };
 
   const [count, setCount] = React.useState(0);
 
   const updateCount = React.useCallback(() => {
-    fetch(new URL(`${window.location.origin}/api/like/count`), { method: 'GET'})
-      .then(response => response.json())
-      .then(data => {
-        console.log('data', data)
-        setCount(data?.count ?? 0);
+    getLikeCount()
+      .then(count => {
+        setCount(count ?? 0);
       });
   }, []);
 
