@@ -14,7 +14,7 @@ services:
       - ./:/usr/src/fe-notes-docusaurus
       - web_data:/usr/src/fe-notes-docusaurus/build
       - sql_data:/usr/src/sql_lite
-    command: sh -c "cd /usr/src/fe-notes-docusaurus && yarn && node /usr/src/fe-notes-docusaurus/backend/src/index.js"
+    command: sh -c "cd /usr/src/fe-notes-docusaurus && yarn && yarn build && node /usr/src/fe-notes-docusaurus/backend/src/index.js"
     # command: sh -c "cd /usr/src/fe-notes-docusaurus && npm install -g node-gyp && yarn && yarn build && node /usr/src/fe-notes-docusaurus/apis/index.js"
     # command: sh -c "cd /usr/src/fe-notes-docusaurus && yarn && yarn build && node /usr/src/fe-notes-docusaurus/apis/index.js"
 
