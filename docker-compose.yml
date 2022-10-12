@@ -16,6 +16,12 @@ services:
       - sql_data:/usr/src/sql_lite
     command: sh -c "cd /usr/src/fe-notes-docusaurus && npm install -g node-gyp && yarn && yarn build && node /usr/src/fe-notes-docusaurus/apis/index.js"
     # command: sh -c "cd /usr/src/fe-notes-docusaurus && yarn && yarn build && node /usr/src/fe-notes-docusaurus/apis/index.js"
+
 volumes:
   web_data:
   sql_data:
+
+networks:
+  default:
+    name: docusaurus
+    external: true

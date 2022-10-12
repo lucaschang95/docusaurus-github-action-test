@@ -27,3 +27,9 @@ A bridge can be a hardware device or a software device running within a host mac
 ```bash
 docker network connect [OPTIONS] NETWORK CONTAINER
 ```
+
+## 断开连接
+
+```bash
+docker network disconnect [OPTIONS] NETWORK CONTAINER
+```
