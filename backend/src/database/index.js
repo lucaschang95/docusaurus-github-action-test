@@ -13,7 +13,7 @@ let pool;
 
 async function init() {
     await waitPort({ host: '81.70.59.149', port : 3306});
-
+    console.log('port exist!');
     pool = mysql.createPool({
         connectionLimit: 10,
         host: '81.70.59.149',
