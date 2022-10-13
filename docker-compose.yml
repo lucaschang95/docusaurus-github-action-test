@@ -14,7 +14,12 @@ services:
       - ./:/usr/src/fe-notes-docusaurus
       - web_data:/usr/src/fe-notes-docusaurus/build
     command: sh -c "cd /usr/src/fe-notes-docusaurus && yarn && node /usr/src/fe-notes-docusaurus/backend/src/index.js"
-    # command: sh -c "cd /usr/src/fe-notes-docusaurus && yarn && yarn build && node /usr/src/fe-notes-docusaurus/backend/src/index.js"
+  frontend:
+    image: node:18-alpine
+    volumes:
+      - ./:/usr/src/fe-notes-docusaurus
+      - web_data:/usr/src/fe-notes-docusaurus/build
+    command: sh -c "cd /usr/src/fe-notes-docusaurus && yarn && yarn build"
 
 volumes:
   web_data:
