@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -20,16 +20,16 @@ function HomepageHeader() {
     }
   };
 
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = useState(0);
 
-  const updateCount = React.useCallback(() => {
+  const updateCount = useCallback(() => {
     getLikeCount()
       .then(count => {
         setCount(count ?? 0);
       });
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     updateCount();
   }, []);
 

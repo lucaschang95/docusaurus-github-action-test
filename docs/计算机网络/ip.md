@@ -117,3 +117,22 @@ ping command 就是利用ICMP来的
 ### IGMP
 
 ## 一些特殊的 ip 地址
+
+`127.0.0.1`: 监听 127.0.0.1 端口的应用程序，只能 serve client on the same host
+`0.0.0.0`: 监听 0.0.0.0 端口的应用程序，可以 server 任意的 client
+
+### `0.0.0.0`
+
+0.0.0.0 是一个不可路由的元地址，用于指定无效、未知或不适用的目标（“无特定地址”占位符）。
+
+配置服务器：A way to specify "any IPv4 address at all"
+
+all IPv4 addresses on the local machine
+
+如果主机有两个 IP 地址，192.168.1.1和10.1.2.1，并且在主机上运行的服务器配置为侦听0.0.0.0，那么这两个 IP 地址都可以访问它。
+
+### `127.0.0.1`
+
+loopback address, localhost 通常被解释为 `127.0.0.1`
+
+The address is used to establish an IP connection to the same machine or computer being used by the end-user.该地址用于与最终用户使用的同一台机器或计算机建立 IP 连接。
