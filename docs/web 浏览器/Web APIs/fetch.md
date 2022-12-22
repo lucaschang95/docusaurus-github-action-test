@@ -4,7 +4,7 @@
 
 ## 关联的其他 WebAPI
 
-- `Response` object
+- fetch 请求会返回一个 `Response` 对象
 - `URL`
 - `Request`
 

@@ -13,4 +13,4 @@
 ## restore source
 
 - 如果没有指定，则默认是 HEAD / index
-- 制定后, 可以是 commit 
+- 制定后, 可以是 commit

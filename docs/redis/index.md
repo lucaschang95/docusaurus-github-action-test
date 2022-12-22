@@ -1,0 +1,3 @@
+# redis
+
+REmote DIctionary Service
