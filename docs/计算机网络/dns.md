@@ -35,7 +35,6 @@
 
 本地的互联网提供商, 大学等, 都有可能拥有自己的一个本地域名服务器
 
-
 ## 域名解析过程
 
 - 应用程序需要解析一个dns，交付给resolver进行查询
@@ -46,22 +45,26 @@
 
 **递归查询和迭代查询**
 
- 
-
 - 最开始都是由主机去查询本地域名服务器, 这个过程是 **递归查询**
 
 - 本地域名服务器迭代的查询顶级域名服务器, 权限域名服务器, 这个过程
 
-
-
 ## Zone file
-
-
-
-
 
 ## SOA记录
 
 start of authority
 
 - 一个zone file只能有一个soa记录
+
+## A 记录
+
+A record stands for a Address Record
+
+maps a domain name to the IP address (Version 4) of the computer hosting the domain.
+
+### 使用 dig 获取相应的 A 记录
+
+```shell
+dig A api.dnsimple.com
+```

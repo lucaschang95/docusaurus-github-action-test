@@ -4,8 +4,6 @@
 - 可以使用`transform-origin`这个属性
 - 还可以有3D的效果
 
-
-
 ## 旋转
 
 **单位: deg**
@@ -14,72 +12,43 @@
 
 - 在屏幕内转, 正值为顺时针, 负值为逆时针
 
-
-
 #### `rotateX()`
 
 - 以横轴(x轴)旋转
-
-
 
 #### `rotateY()`
 
 - 以纵轴(x轴)旋转
 
-
-
 ## 移动
 
-
-
-#### `translate()`
+### `translate()`
 
 两个值, 一个为x轴, 一个为y轴(纵轴)
 
+### `translateX()`
 
-
-#### `translateX()`
-
-
-
-#### `translateY()`
-
-
-
-
+### `translateY()`
 
 ## 缩放
-
-
 
 #### `scale()`
 
 第一个为x轴的缩放比例, 第二个为y轴的缩放比例
 
-
+```css
+transform: scale(sx);
+transform: scale(sx, sy); // 可以区分 x 和 y 方向的 scale 大小
+```
 
 #### `scaleX()`
 
-
-
 #### `scaleY()`
-
-
-
-
 
 ## 扭曲
 
-
-
 #### skew()
 
-
-
-
-
 ## 矩阵
-
-
 
 #### matrix()

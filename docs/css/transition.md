@@ -1,5 +1,7 @@
 # transition 过渡
 
+provide a way to control animation speed when changing CSS properties
+
 - 指定某个属性从一个状态到另一个状态时如何过渡
 - 动画的意义: 告诉用户发生了什么
 - transition属性
@@ -14,5 +16,8 @@
     - steps(4)
   - `transition-delay`
 
-- transition
-  - syntax: `property duration timing-function delay`
+## 语法
+
+```css
+transition: transition-property transition-duration transition-timing-function transition-delay
+```

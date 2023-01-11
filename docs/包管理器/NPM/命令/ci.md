@@ -1,6 +1,6 @@
 # ci
 
-> clean install
+> clean install 全新安装
 
 npm ci will be significantly faster when:
 
@@ -14,3 +14,7 @@ In short, the main differences between using npm install and npm ci are:
 3. npm ci can only install entire projects at a time: individual dependencies cannot be added with this command.
 4. If a node_modules is already present, it will be automatically removed before npm ci begins its install.
 5. It will never write to package.json or any of the package-locks: installs are essentially frozen.
+
+## 用处
+
+- 自动化环境: 测试平台、持续集成和部署
