@@ -1,5 +1,7 @@
 # git status
 
+> show the working tree status
+
 ## Syntax
 
 `git status [<options>...] [--] [<pathspec>`]`

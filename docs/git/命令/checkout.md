@@ -38,6 +38,14 @@ git checkout [--detach] [<commit>]
 - 这个时候 working tree 的内容是 commit 的内容 + local modification
 - 使用 `-m` flag 进入 merge 界面
 
+## 场景
+
+### 我想把未暂存的内容移动到一个新分支
+
+```shell
+git checkout -b new-branch # 针对 worktree 和 stage area 的改动都是生效的
+```
+
 ## checkout 和 reset 的区别？
 
 - 侧重点不同

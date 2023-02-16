@@ -14,18 +14,10 @@ Vue.directive('my-directive', {
 })
 ```
 
-
-
-
-
-
-
-
-
 ## 钩子函数参数
 
 - el：指令所绑定的元素
-- binding：一个对象
+
   - name: 指令名
   - value: 指令的绑定值
   - oldValue：指令绑定的前一个值

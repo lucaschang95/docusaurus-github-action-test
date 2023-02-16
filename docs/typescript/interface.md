@@ -21,3 +21,38 @@ interface Bear extends Animal {
   honey: boolean
 }
 ```
+
+## type 和 interface 的区别？
+
+> type 其实叫 “类型别名”
+
+### 相同点
+
+- 都可以描述对象和函数
+
+### 不同点
+
+- interface 可以 extends; type 不可以 extends，但是可以通过交叉类型来实现 interface 的 extends 行为
+
+#### type 可以，interface 不行
+
+- type 可以声明基本类型的别名，联合类型，元组类型(tuple)
+
+```ts
+type name = string;
+interface Dog {
+  wong();
+}
+interface Cat {
+  miao();
+}
+type Pet = Dog | Cat;
+
+let a: Pet = {
+  wong() {},
+};
+```
+
+#### interface 可以，type 不行
+
+- interface 能够重复声明，并进行声明合并

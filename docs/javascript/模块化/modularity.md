@@ -12,26 +12,21 @@
 - 命名空间
 - 可复用性
 
-
-
 ## IIFE (Immediately Invoked Function Expression)
 
 ```javascript
 let result = (function () {
     return xxx;
 })();
-​```
+```
+
 - design pattern 设计模式
 - 原理是闭包(closure)
 - grouping operator 防止访问内部变量
 - invoked function expression立即调用该匿名函数
 - 通过return的object来实现通信
 
-
-
-
-
-#### 模块化的实现
+### 模块化的实现
 
 - 原始: 匿名函数自调用
   - 返回一个对象, 对象中包含希望暴露的方法等 (闭包)
